@@ -1,8 +1,17 @@
 import React from 'react';
-import { Box, List, ListItem, ListItemText } from '@mui/material';
+import { Box, List, ListItem, ListItemText, ListItemIcon } from '@mui/material';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
+import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
+import InfoIcon from '@mui/icons-material/Info';
 
 export const VerticalNavBars = () => {
-  const navItems = ['Profile', 'Achievements', 'Exercises', 'About QuickFit'];
+  const navItems = [
+    { icon: <AccountCircleIcon />, text: 'Profile' },
+    { icon: <EmojiEventsIcon/>, text: 'Achievements' },
+    { icon: <FitnessCenterIcon/>, text: 'Exercises' },
+    { icon: <InfoIcon/>, text: 'About QuickFit' }
+  ];
 
   return (
     <Box
@@ -17,12 +26,12 @@ export const VerticalNavBars = () => {
     >
       <List>
         {navItems.map((item) => (
-          <ListItem button key={item}>
-            <ListItemText primary={item} />
+          <ListItem button key={item.text} sx={{ gap: 1 }}>
+            {item.icon && <ListItemIcon sx={{ minWidth: 'auto' }}>{item.icon}</ListItemIcon>}
+            <ListItemText primary={item.text} />
           </ListItem>
         ))}
       </List>
     </Box>
   );
 };
-
