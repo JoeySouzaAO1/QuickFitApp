@@ -5,7 +5,7 @@ export const ExtraInfo = () => {
   return (
     <Box
       sx={{
-        width: 325,
+        width: 300,
         position: 'fixed',
         top: 100,
         right: 0,
