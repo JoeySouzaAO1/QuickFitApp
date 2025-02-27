@@ -1,12 +1,16 @@
 import React, { useRef, useEffect, useState } from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, useMediaQuery } from '@mui/material';
 import Grid from '@mui/material/Grid2';
+import { useTheme } from '@mui/material/styles';
 
 const ExercisePath = () => {
   const weeks = [1, 2, 3, 4];
   const daysPerWeek = 7;
   const [currentWeek, setCurrentWeek] = useState(1);
   const weekRefs = useRef([]);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+    
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -27,8 +31,9 @@ const ExercisePath = () => {
     return () => observer.disconnect();
   }, []);
 
+
   return (
-    <Box
+    /* <Box
       sx={{
         flexGrow: 1,
         overflowY: 'auto',
@@ -40,6 +45,13 @@ const ExercisePath = () => {
         height: 'calc(100vh - 40px)',
         position: 'relative',
       }}
+    > */
+    <Box
+      sx={{
+        // padding: isMobile ? '10px' : '20px',
+        height: '100%',
+        overflow: 'auto',
+      }}
     >
       {weeks.map((week) => (
         <Box
@@ -48,7 +60,7 @@ const ExercisePath = () => {
           data-week={week}
           sx={{
             marginBottom: '40px',
-            width: '100%',
+            width: 'auto',
             textAlign: 'center',
             position: 'relative',
           }}
