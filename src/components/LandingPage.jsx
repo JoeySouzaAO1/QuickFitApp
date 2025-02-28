@@ -33,15 +33,16 @@ const LandingPage = () => {
       <Box sx={{ 
         display: 'flex', 
         flexGrow: 1,
-        overflow: 'hidden' // Ensures child components don't overflow
+        overflow: 'hidden'
       }}>
         {isMobile ? <HorizontalNavBar /> : <VerticalNavBars />}
         <Box sx={{ 
           flexGrow: 1, 
-          // height: isMobile ? 'calc(100% - 100px)' : '100%',
           height: '100%',
-          width: isMobile ? '100%' : 'calc(100% - 625px)', // Adjust based on VerticalNavBars and ExtraInfo widths
-          margin: isMobile ? '30px 0px 50px 0px' : '0 325px 0 300px', // Adjust based on VerticalNavBars and ExtraInfo widths
+          // width: isMobile ? '100%' : 'calc(100% - 700px)', 
+          width: '100%',
+          // minWidth: '300px',
+          margin: isMobile ? '30px 0px 50px 0px' : '0 450px 0 350px', 
         }}>
           <ExercisePath />
         </Box>

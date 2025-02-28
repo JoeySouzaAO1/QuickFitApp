@@ -3,8 +3,9 @@ import { Box, BottomNavigation, BottomNavigationAction } from '@mui/material';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
+import Groups2OutlinedIcon from '@mui/icons-material/Groups2Outlined';
 import InfoIcon from '@mui/icons-material/Info';
-import { yellow, blue, green, orange } from '@mui/material/colors';
+import { yellow, blue, green, orange, red } from '@mui/material/colors';
 
 export const HorizontalNavBar = () => {
   const [value, setValue] = React.useState(0);
@@ -12,6 +13,7 @@ export const HorizontalNavBar = () => {
   const navItems = [
     { icon: <AccountCircleIcon sx={{color: blue[600]}} />, label: 'Profile' },
     { icon: <EmojiEventsIcon sx={{color: yellow[500]}} />, label: 'Achievements' },
+    { icon: <Groups2OutlinedIcon sx={{color: red [300]}}/>, label: 'Community' },
     { icon: <FitnessCenterIcon sx={{color: green[500]}} />, label: 'Exercises' },
     { icon: <InfoIcon sx={{color: orange[500]}} />, label: 'About' }
   ];
@@ -19,7 +21,6 @@ export const HorizontalNavBar = () => {
   return (
     <Box sx={{ 
       position: 'fixed', 
-      borderTop: '1px',
       borderTop: `1px solid ${blue[600]}`,
       bottom: 0, 
       left: 0, 
