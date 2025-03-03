@@ -1,26 +1,4 @@
-/* import React from 'react';
-import { Box } from '@mui/material';
 
-const Logo = () => {
-  return (
-    <Box
-      sx={{
-        width: 300,
-        height: 100,
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        
-        padding: '20px'
-        // Add your logo styling here
-      }}
-    >
-<img src="/QuickFit.png" alt="QuickFit Logo" />
-</Box>
-  );
-};
-
-export default Logo; */
 import React from 'react';
 import { Box} from '@mui/material';
 import { useTheme } from '@mui/material/styles';
@@ -51,10 +29,11 @@ const Logo = () => {
       }}
     >
       <img 
-  src={`${import.meta.env.BASE_URL}QuickFit.png`} 
+  src={`${import.meta.env.BASE_URL || '/'}QuickFit.png`} 
   alt="QuickFit Logo" 
   style={{ width: '100%', height: 'auto' }} 
 />
+
 
     </Box>
   );
