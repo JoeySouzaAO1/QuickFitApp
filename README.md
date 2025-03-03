@@ -1,6 +1,8 @@
 # 🏋️‍♀️ QuickFit
 QuickFit is a React/Vite application designed for busy professionals who don't have time for long workouts. It transforms exercise into an engaging game, making fitness fun and accessible for those with tight schedules.
 
+## 🔗 [Live Demo](https://joeysouzaao1.github.io/QuickFitApp/) ##
+
 ## 📚 Overview
 QuickFit aims to revolutionize the way busy individuals approach fitness by gamifying short, effective workouts. The app is currently in its early stages of development, focusing on creating an enjoyable and efficient exercise experience.
 
