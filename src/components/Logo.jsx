@@ -50,7 +50,12 @@ const Logo = () => {
         marginTop
       }}
     >
-      <img src="/QuickFit.png" alt="QuickFit Logo" style={{ width: '100%', height: 'auto' }} />
+      <img 
+  src={`${import.meta.env.BASE_URL}QuickFit.png`} 
+  alt="QuickFit Logo" 
+  style={{ width: '100%', height: 'auto' }} 
+/>
+
     </Box>
   );
 };
