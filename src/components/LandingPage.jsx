@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, useMediaQuery} from '@mui/material';
-import Grid from '@mui/material/Grid2';
+import Grid from '@mui/material/Unstable_Grid2';
 import Logo from './Logo';
 import { VerticalNavBars } from './VerticalNavBars';
 import UserIcon from './UserIcon';
